@@ -162,6 +162,19 @@ class PkgConfig(object):
             self.load_base_addr = "0xA0001000"
             self.compute_base_addr = "0xA0002000"
             self.store_base_addr = "0xA0003000"
+        elif self.TARGET == "zc706":
+            self.fpga_device = "xc7z045ffg900-2"
+            self.fpga_family = "zynq-7000"
+            self.fpga_freq = 100
+            self.fpga_per = 7
+            self.fpga_log_axi_bus_width = 6
+            self.axi_prot_bits = '000'
+            # IP register address map
+            self.ip_reg_map_range = "0x1000"
+            self.fetch_base_addr = "0x43C00000"
+            self.load_base_addr = "0x43C01000"
+            self.compute_base_addr = "0x43C02000"
+            self.store_base_addr = "0x43C03000"
         else:
             # By default, we use the pynq parameters
             self.fpga_device = "xc7z020clg484-1"

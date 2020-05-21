@@ -144,6 +144,8 @@ def main():
             cflags_str += " -DVTA_TARGET_DE10_NANO"
         elif pkg.TARGET == "ultra96":
             cflags_str += " -DVTA_TARGET_ULTRA96"
+        elif pkg.TARGET == "zc706":
+            cflags_str += " -DVTA_TARGET_ZC706"
         print(cflags_str)
 
     if args.ldflags:
